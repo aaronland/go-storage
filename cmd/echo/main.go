@@ -6,10 +6,10 @@ import (
 	"log"
 )
 
-func main(){
+func main() {
 
 	str_dsn := flag.String("dsn", "root=.", "...")
-	fname := flag.String("filename", "echo.txt", "...")	
+	fname := flag.String("filename", "echo.txt", "...")
 
 	flag.Parse()
 
@@ -20,7 +20,7 @@ func main(){
 	}
 
 	key := *fname
-	
+
 	fh, err := store.Open(key)
 
 	if err != nil {
